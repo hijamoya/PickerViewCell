@@ -12,20 +12,20 @@ Useage
 =====================
 Make your table view cell be the cells we provided, and just invoke `becomeFirstResponder` when the cell is selected.
 
-```java
-override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-tableView.deselectRow(at: indexPath, animated: true)
-if let cell = tableView.cellForRow(at: indexPath) as? DatePickerTableViewCell {
-cell.delegate = self
-if !cell.isFirstResponder {
-_ = cell.becomeFirstResponder()
-}
-} else if let cell = tableView.cellForRow(at: indexPath) as? PickerTableViewCell {
-cell.delegate = self
-cell.dataSource = self
-if !cell.isFirstResponder {
-_ = cell.becomeFirstResponder()
-}
-}
-}
+```swift
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    if let cell = tableView.cellForRow(at: indexPath) as? DatePickerTableViewCell {
+      cell.delegate = self
+      if !cell.isFirstResponder {
+        _ = cell.becomeFirstResponder()
+      }
+    } else if let cell = tableView.cellForRow(at: indexPath) as? PickerTableViewCell {
+      cell.delegate = self
+      cell.dataSource = self
+      if !cell.isFirstResponder {
+        _ = cell.becomeFirstResponder()
+      }
+    }
+  }
 ```
