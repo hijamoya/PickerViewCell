@@ -1,38 +1,36 @@
 
 import UIKit
 
-public class DatePickerTableViewCell: UITableViewCell {
-
-  public var datePickerMode = UIDatePickerMode.date
+open class DatePickerTableViewCell: UITableViewCell {
 
   open weak var delegate: DatePickerTableCellDelegate?
 
-  fileprivate let picker = UIDatePicker()
+  public let picker = UIDatePicker()
 
-  public override func awakeFromNib() {
+  open override func awakeFromNib() {
     super.awakeFromNib()
-    picker.datePickerMode = datePickerMode
+    picker.datePickerMode = UIDatePickerMode.date
     picker.addTarget(self, action: #selector(DatePickerTableViewCell.onDateChanged(_:)), for: UIControlEvents.valueChanged)
   }
 
-  public override var canBecomeFirstResponder: Bool {
+  open override var canBecomeFirstResponder: Bool {
     return true
   }
 
-  public override var canResignFirstResponder: Bool {
+  open override var canResignFirstResponder: Bool {
     return true
   }
 
-  public override var inputView: UIView? {
+  open override var inputView: UIView? {
     return picker
   }
 
-  public override func becomeFirstResponder() -> Bool {
+  open override func becomeFirstResponder() -> Bool {
     delegate?.onDatePickerOpen(self)
     return super.becomeFirstResponder()
   }
 
-  public override func resignFirstResponder() -> Bool {
+  open override func resignFirstResponder() -> Bool {
     delegate?.onDatePickerClose(self)
     return super.resignFirstResponder()
   }

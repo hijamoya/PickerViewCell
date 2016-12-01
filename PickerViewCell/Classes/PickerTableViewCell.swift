@@ -1,39 +1,39 @@
 
 import UIKit
 
-public class PickerTableViewCell: UITableViewCell {
+open class PickerTableViewCell: UITableViewCell {
 
   open weak var dataSource: PickerTableCellDataSource?
   open weak var delegate: PickerTableCellDelegate?
 
-  fileprivate let picker = UIPickerView()
+  public let picker = UIPickerView()
 
-  public override func awakeFromNib() {
+  open override func awakeFromNib() {
     super.awakeFromNib()
     picker.delegate = self
     picker.dataSource = self
   }
 
-  public override var canBecomeFirstResponder: Bool {
+  open override var canBecomeFirstResponder: Bool {
     return true
   }
 
-  public override var canResignFirstResponder: Bool {
+  open override var canResignFirstResponder: Bool {
     return true
   }
 
-  public override func becomeFirstResponder() -> Bool {
+  open override func becomeFirstResponder() -> Bool {
     picker.dataSource = self
     delegate?.onPickerOpen(self)
     return super.becomeFirstResponder()
   }
 
-  public override func resignFirstResponder() -> Bool {
+  open override func resignFirstResponder() -> Bool {
     delegate?.onPickerClose(self)
     return super.resignFirstResponder()
   }
 
-  public override var inputView: UIView? {
+  open override var inputView: UIView? {
     return picker
   }
 
