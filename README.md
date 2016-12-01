@@ -6,7 +6,7 @@ We provide two types of UITableViewCell:<br/>
 
 Demo
 =====================
-![Demo](https://s3-ap-northeast-1.amazonaws.com/uploads-jp.hipchat.com/119782/912422/X5rdr3NDLQ9TprK/simulator-screen-shot-1-dec-20.png)
+![Demo](https://s3-ap-northeast-1.amazonaws.com/uploads-jp.hipchat.com/119782/912422/OmsWKq60i5C8ODJ/ezgif.com-44fc6f7907.gif)
 
 Installation
 ===================
