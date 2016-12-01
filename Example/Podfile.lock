@@ -1,0 +1,16 @@
+PODS:
+  - PickerViewCell (0.1.0)
+
+DEPENDENCIES:
+  - PickerViewCell (from `../`)
+
+EXTERNAL SOURCES:
+  PickerViewCell:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PickerViewCell: 48407991a4409fa07eebb4635f31ffd767fb2405
+
+PODFILE CHECKSUM: a9029334d47482321e470f9d83dd94d8a7ef59a7
+
+COCOAPODS: 1.1.1

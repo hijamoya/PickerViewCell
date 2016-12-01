@@ -1,29 +1,31 @@
-# PickerViewCell
+PickerViewCell
+=====================
+We provide two type of UITableViewCell:<br/>
+1. DatePickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIDatePicker and then you can use the delegate function to get the value of the picker.<br/>
+2.PickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIPickerView. You should specify your datasource and delegate.
 
-[![CI Status](http://img.shields.io/travis/jam_hsu/PickerViewCell.svg?style=flat)](https://travis-ci.org/jam_hsu/PickerViewCell)
-[![Version](https://img.shields.io/cocoapods/v/PickerViewCell.svg?style=flat)](http://cocoapods.org/pods/PickerViewCell)
-[![License](https://img.shields.io/cocoapods/l/PickerViewCell.svg?style=flat)](http://cocoapods.org/pods/PickerViewCell)
-[![Platform](https://img.shields.io/cocoapods/p/PickerViewCell.svg?style=flat)](http://cocoapods.org/pods/PickerViewCell)
+Demo
+=====================
+![Demo](https://s3-ap-northeast-1.amazonaws.com/uploads-jp.hipchat.com/119782/912422/X5rdr3NDLQ9TprK/simulator-screen-shot-1-dec-20.png)
 
-## Example
+Useage
+=====================
+Make your table view cell be the cells we provided, and just invoke `becomeFirstResponder` when the cell is selected.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-PickerViewCell is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "PickerViewCell"
+```java
+override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+tableView.deselectRow(at: indexPath, animated: true)
+if let cell = tableView.cellForRow(at: indexPath) as? DatePickerTableViewCell {
+cell.delegate = self
+if !cell.isFirstResponder {
+_ = cell.becomeFirstResponder()
+}
+} else if let cell = tableView.cellForRow(at: indexPath) as? PickerTableViewCell {
+cell.delegate = self
+cell.dataSource = self
+if !cell.isFirstResponder {
+_ = cell.becomeFirstResponder()
+}
+}
+}
 ```
-
-## Author
-
-jam_hsu, jam_hsu@htc.com
-
-## License
-
-PickerViewCell is available under the MIT license. See the LICENSE file for more info.

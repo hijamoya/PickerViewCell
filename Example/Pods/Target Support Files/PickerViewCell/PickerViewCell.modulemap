@@ -1,0 +1,6 @@
+framework module PickerViewCell {
+  umbrella header "PickerViewCell-umbrella.h"
+
+  export *
+  module * { export * }
+}

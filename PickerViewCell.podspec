@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PickerViewCell'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PickerViewCell.'
+  s.summary          = 'A library implement the UITableViewCell with a UIDatePicker or a UIPickerView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+We provide two type of UITableViewCell:
+1. DatePickerTableViewCell: when you make this cell becomeFirstResponder, it will invoke a UIDatePicker and then you can use the delegate function to get the value of the picker.
+2.PickerTableViewCell: when you make this cell becomeFirstResponder, it will invoke a UIPickerView. You should specify your datasource and delegate.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/PickerViewCell'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jam_hsu' => 'jam_hsu@htc.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/PickerViewCell.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.homepage         = 'https://github.com/hijamoya/PickerViewCell'
+  s.screenshots      = 'https://s3-ap-northeast-1.amazonaws.com/uploads-jp.hipchat.com/119782/912422/X5rdr3NDLQ9TprK/simulator-screen-shot-1-dec-20.png'
+  s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
+  s.author           = { 'jam_hsu' => 'hijamoya2004@hotmail.com' }
+  s.source           = { :git => 'https://github.com/hijamoya/PickerViewCell.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'PickerViewCell/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'PickerViewCell' => ['PickerViewCell/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
