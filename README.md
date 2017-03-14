@@ -16,7 +16,7 @@ Installation
 ```
 pod 'PickerViewCell', :git => 'https://github.com/hijamoya/PickerViewCell.git'
 ```
-If you need a formal release, please fire a issue to me. I will do that.
+If you need a formal release, please file an issue to me. I will do that.
 
 Useage
 =====================
