@@ -5,7 +5,7 @@ PickerViewCell
 <br/>
 We provide two types of UITableViewCell:<br/>
 <p>1. DatePickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIDatePicker and then you can use the delegate function to get the value of the picker.</p>
-<p>2.PickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIPickerView. You should specify your datasource and delegate.</p>
+<p>2. PickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIPickerView. You should specify your datasource and delegate.</p>
 
 Demo
 =====================
