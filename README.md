@@ -14,9 +14,8 @@ Demo
 Installation
 ===================
 ```
-pod 'PickerViewCell', :git => 'https://github.com/hijamoya/PickerViewCell.git'
+pod 'PickerViewCell', '0.1.0'
 ```
-If you need a formal release, please file an issue to me. I will do that.
 
 Useage
 =====================
