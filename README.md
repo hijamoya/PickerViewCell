@@ -13,7 +13,7 @@ Demo
 Installation
 ===================
 ```
-pod 'PickerViewCell', '0.1.0'
+pod 'PickerViewCell'
 ```
 
 Useage
