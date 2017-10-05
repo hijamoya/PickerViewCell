@@ -58,16 +58,16 @@ extension PickerTableViewCell: UIPickerViewDelegate {
 extension PickerTableViewCell: UIPickerViewDataSource {
 
   public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-    return dataSource!.numberOfComponents(in: pickerView, forCell: self)
+    return dataSource?.numberOfComponents(in: pickerView, forCell: self) ?? 0
   }
 
   public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    return dataSource!.pickerView(pickerView, numberOfRowsInComponent: component, forCell: self)
+    return dataSource?.pickerView(pickerView, numberOfRowsInComponent: component, forCell: self) ?? 0
   }
 
 }
 
-/// Hook of delegate of `UIPickerView`
+/// Hook of delegate of `UIPickerView`.
 public protocol PickerTableCellDelegate: class {
 
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int, forCell cell: PickerTableViewCell) -> String?
@@ -86,7 +86,7 @@ public protocol PickerTableCellDelegate: class {
 
 }
 
-/// Hook of datasource of `UIPickerView`
+/// Hook of datasource of `UIPickerView`.
 public protocol PickerTableCellDataSource: class {
 
   func numberOfComponents(in pickerView: UIPickerView, forCell cell: PickerTableViewCell) -> Int

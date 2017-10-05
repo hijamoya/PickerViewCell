@@ -9,8 +9,8 @@ open class DatePickerTableViewCell: UITableViewCell {
 
   open override func awakeFromNib() {
     super.awakeFromNib()
-    picker.datePickerMode = UIDatePickerMode.date
-    picker.addTarget(self, action: #selector(DatePickerTableViewCell.onDateChanged(_:)), for: UIControlEvents.valueChanged)
+    picker.datePickerMode = .date
+    picker.addTarget(self, action: #selector(DatePickerTableViewCell.onDateChanged(_:)), for: .valueChanged)
   }
 
   open override var canBecomeFirstResponder: Bool {
