@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PickerViewCell'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A library implement the UITableViewCell with a UIDatePicker or a UIPickerView.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ We provide two type of UITableViewCell:
                        DESC
 
   s.homepage         = 'https://github.com/hijamoya/PickerViewCell'
-  s.screenshots      = 'https://imgur.com/9H2FfFa'
+  s.screenshots      = 'https://i.imgur.com/9H2FfFa.png'
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.author           = { 'jam_hsu' => 'hijamoya2004@hotmail.com' }
   s.source           = { :git => 'https://github.com/hijamoya/PickerViewCell.git', :tag => s.version.to_s }
