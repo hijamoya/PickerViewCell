@@ -8,7 +8,7 @@ We provide two types of UITableViewCell:<br/>
 
 Demo
 =====================
-![Demo](https://imgur.com/Hskz2Aj)
+![Demo](demo.gif)
 
 Installation
 ===================
