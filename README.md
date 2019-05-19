@@ -1,6 +1,6 @@
 PickerViewCell
 =====================
-[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
+[![Language Swift 5.0](https://img.shields.io/badge/Language-Swift%205.0-orange.svg?style=flat)](https://swift.org)
 <br/>
 We provide two types of UITableViewCell:<br/>
 <p>1. DatePickerTableViewCell: when you make this cell `becomeFirstResponder`, it will invoke a UIDatePicker and then you can use the delegate function to get the value of the picker.</p>
@@ -8,7 +8,7 @@ We provide two types of UITableViewCell:<br/>
 
 Demo
 =====================
-![Demo](https://s3-ap-northeast-1.amazonaws.com/uploads-jp.hipchat.com/119782/912422/OmsWKq60i5C8ODJ/ezgif.com-44fc6f7907.gif)
+![Demo](https://imgur.com/Hskz2Aj)
 
 Installation
 ===================

@@ -35,7 +35,7 @@ open class DatePickerTableViewCell: UITableViewCell {
     return super.resignFirstResponder()
   }
 
-  func onDateChanged(_ sender: UIDatePicker) {
+    @objc func onDateChanged(_ sender: UIDatePicker) {
     delegate?.onDateChange(sender, cell: self)
   }
 
