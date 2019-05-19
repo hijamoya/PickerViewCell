@@ -24,12 +24,14 @@ We provide two type of UITableViewCell:
                        DESC
 
   s.homepage         = 'https://github.com/hijamoya/PickerViewCell'
-  s.screenshots      = 'https://imgur.com/Hskz2Aj'
+  s.screenshots      = 'https://imgur.com/9H2FfFa'
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.author           = { 'jam_hsu' => 'hijamoya2004@hotmail.com' }
   s.source           = { :git => 'https://github.com/hijamoya/PickerViewCell.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
+
+  s.swift_version = '5.0'
 
   s.source_files = 'PickerViewCell/Classes/**/*'
   
